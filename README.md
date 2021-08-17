@@ -8,20 +8,24 @@ You can generate a [dependency graph](https://github.com/hchiam/learning-depende
 
 <https://facebook.github.io/react-native/docs/getting-started>
 
-## Setup
+## Setup from this repo
 
 ```bash
 npm install -g expo-cli
 cd learning-react-native
 npm install
-```
-
-## Development
-
-```bash
 npm start
 # hit the "w" key to run in browser
 # http://192.168.0.165:19006/
 # open developer tools and choose a mobile device
 # when you make changes, the preview will automatically reload
+```
+
+or:
+
+```bash
+yarn global add expo-cli
+cd learning-react-native
+yarn
+yarn start
 ```
