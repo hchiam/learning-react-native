@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
 
 export default function App() {
   return (
@@ -8,7 +8,7 @@ export default function App() {
       {/* Not a regular button element because needs certain extra things to be cross-compatible: */}
       <Button
         onPress={() => {
-          alert('You tapped the button!');
+          alert("You tapped the button!");
         }}
         title="Press Me"
       />
@@ -19,8 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
