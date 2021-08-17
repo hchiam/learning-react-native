@@ -2,7 +2,9 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-You can generate a [dependency graph](https://github.com/hchiam/learning-dependency-cruiser) with `bash show_dep_graph.sh`.
+Generate native Android and native iOS components using one code base.
+
+Core/Custom/Community components ∈ React Native components ∈ React components.
 
 ## Setup from scratch
 
