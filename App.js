@@ -6,12 +6,12 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       {/* Not a regular button element because needs certain extra things to be cross-compatible: */}
-      <Button
+      {/* <Button
         onPress={() => {
           alert("You tapped the button!");
         }}
         title="Press Me"
-      />
+      /> */}
     </View>
   );
 }
