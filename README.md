@@ -39,3 +39,7 @@ If you see the localhost page automatically open in your browser, but your mobil
 If you see a console error about something like the SDK version being incompatible, or react native version mismatch in Expo Go on your mobile device,try hitting the dismiss button and see if the demo still works for now. You might need to run `expo update` to automatically update all dependencies to be compatible in the `app.json` and `package.json` for you.
 
 If you still can't get it to work on a real mobile device, you can still simulate mobile in a browser by hitting the "w" key in the terminal to run in browser.
+
+## Differences between React Native and Flutter
+
+<https://flutter.dev/docs/get-started/flutter-for/react-native-devs>
