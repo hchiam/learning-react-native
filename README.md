@@ -47,3 +47,7 @@ If you still can't get it to work on a real mobile device, you can still simulat
 ## Differences between React Native and Flutter
 
 <https://flutter.dev/docs/get-started/flutter-for/react-native-devs>
+
+## Random notes
+
+- [styling: flexbox has different defaults in React Native](https://reactnative.dev/docs/flexbox)
