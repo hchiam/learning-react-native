@@ -6,9 +6,11 @@ Generate native Android and native iOS components using one code base.
 
 Core/Custom/Community components ∈ React Native components ∈ React components.
 
+<https://facebook.github.io/react-native/docs/getting-started>
+
 ## Setup from scratch
 
-<https://facebook.github.io/react-native/docs/getting-started>
+<https://reactnative.dev/docs/environment-setup>
 
 ## Setup from this repo
 
