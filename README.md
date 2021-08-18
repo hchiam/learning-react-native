@@ -6,7 +6,7 @@ Generate native Android and native iOS components using one code base (although 
 
 Core/Custom/Community components ∈ React Native components ∈ React components.
 
-Core components: `<View>`/[`<ScrollView>`](https://reactnative.dev/docs/using-a-scrollview), `<Text>`/[`<TextInput>`](https://reactnative.dev/docs/handling-text-input), `<Image>`, [`<FlatList>`/`<SectionList>`](https://reactnative.dev/docs/using-a-listview) and [more core components and APIs](https://reactnative.dev/docs/components-and-apis).
+Core components: `<View>`/[`<ScrollView>`](https://reactnative.dev/docs/using-a-scrollview), `<Text>`/[`<TextInput>`](https://reactnative.dev/docs/handling-text-input), `<Image>`, [`<FlatList>`/`<SectionList>`](https://reactnative.dev/docs/using-a-listview) and [more core components and APIs](https://reactnative.dev/docs/components-and-apis) like [`<ActivityIndicator>`](https://reactnative.dev/docs/activityindicator), [`<KeyboardAvoidingView>`](https://reactnative.dev/docs/keyboardavoidingview), [`<Modal>`](https://reactnative.dev/docs/modal), [`<Pressable>`](https://reactnative.dev/docs/pressable).
 
 <https://facebook.github.io/react-native/docs/getting-started>
 
