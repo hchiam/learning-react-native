@@ -2,7 +2,7 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-Generate native Android and native iOS components using one code base.
+Generate native Android and native iOS components using one code base (although you can make platform-specific code with [platform detection or file extensions](https://reactnative.dev/docs/platform-specific-code)).
 
 Core/Custom/Community components ∈ React Native components ∈ React components.
 
