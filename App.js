@@ -30,6 +30,8 @@ export default function App() {
         defaultValue={text}
       />
       <SectionList
+        style={styles.SectionList}
+        // horizontal="true"
         sections={[
           { title: "Section 1", data: ["Apple", "Banana", "Carrot"] },
           {
@@ -43,10 +45,7 @@ export default function App() {
         )}
         keyExtractor={(item, index) => index}
       />
-      <ActivityIndicator />
-      <ActivityIndicator size="large" />
-      <ActivityIndicator size="small" color="#0000ff" />
-      <ActivityIndicator size="large" color="#00ff" />
+      <ActivityIndicator size="large" color="#0000ff" style={styles.spinner} />
     </View>
   );
 }
@@ -73,11 +72,20 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     backgroundColor: "rgba(247,247,247,1.0)",
   },
+  SectionList: {
+    flexDirection: "row", // doesn't work
+  },
   item: {
     backgroundColor: "navy",
     padding: 10,
     marginVertical: 8,
     borderRadius: 5,
     textAlign: "center",
+  },
+  spinner: {
+    position: "absolute",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%)",
   },
 });

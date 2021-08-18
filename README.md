@@ -8,6 +8,8 @@ Core/Custom/Community components ∈ React Native components ∈ React component
 
 Core components: `<View>`/[`<ScrollView>`](https://reactnative.dev/docs/using-a-scrollview), `<Text>`/[`<TextInput>`](https://reactnative.dev/docs/handling-text-input), `<Image>`, [`<FlatList>`/`<SectionList>`](https://reactnative.dev/docs/using-a-listview) and [more core components and APIs](https://reactnative.dev/docs/components-and-apis) like [`<ActivityIndicator>`](https://reactnative.dev/docs/activityindicator), [`<KeyboardAvoidingView>`](https://reactnative.dev/docs/keyboardavoidingview), [`<Modal>`](https://reactnative.dev/docs/modal), [`<Pressable>`](https://reactnative.dev/docs/pressable).
 
+There's also more docs on [various APIs](https://reactnative.dev/docs/accessibilityinfo).
+
 <https://facebook.github.io/react-native/docs/getting-started>
 
 ## Setup from scratch
