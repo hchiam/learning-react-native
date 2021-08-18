@@ -53,3 +53,5 @@ If you still can't get it to work on a real mobile device, you can still simulat
 ## Random notes
 
 - [styling: flexbox has different defaults in React Native](https://reactnative.dev/docs/flexbox)
+
+- [linking - open links or deep links](https://reactnative.dev/docs/linking)

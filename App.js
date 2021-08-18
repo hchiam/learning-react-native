@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,15 +7,49 @@ import {
   TextInput,
   SectionList,
   ActivityIndicator,
+  AccessibilityInfo,
+  Linking,
 } from "react-native";
+import { OpenURLButton } from "./components/OpenURLButton.js";
 
 export default function App() {
   const [text, setText] = useState("");
+  const [reduceMotionEnabled, setReduceMotionEnabled] = useState(false);
+  const [screenReaderEnabled, setScreenReaderEnabled] = useState(false);
+
+  useEffect(() => {
+    const reduceMotionChangedSubscription = AccessibilityInfo.addEventListener(
+      "reduceMotionChanged",
+      (reduceMotionEnabled) => {
+        setReduceMotionEnabled(reduceMotionEnabled);
+      }
+    );
+    const screenReaderChangedSubscription = AccessibilityInfo.addEventListener(
+      "screenReaderChanged",
+      (screenReaderEnabled) => {
+        setScreenReaderEnabled(screenReaderEnabled);
+      }
+    );
+
+    AccessibilityInfo.isReduceMotionEnabled().then((reduceMotionEnabled) => {
+      setReduceMotionEnabled(reduceMotionEnabled);
+    });
+    AccessibilityInfo.isScreenReaderEnabled().then((screenReaderEnabled) => {
+      setScreenReaderEnabled(screenReaderEnabled);
+    });
+
+    return () => {
+      reduceMotionChangedSubscription.remove();
+      screenReaderChangedSubscription.remove();
+    };
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
         Open up App.js to start working on your app!
       </Text>
+      <Text>text: {text}</Text>
       {/* Not a regular button element because needs certain extra things to be cross-compatible: */}
       <Button
         onPress={() => {
@@ -45,6 +79,27 @@ export default function App() {
         )}
         keyExtractor={(item, index) => index}
       />
+      <Text style={styles.status}>
+        {/* <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+          target="_blank"
+        >
+          <code>prefers-reduced-motion</code>
+        </a> */}
+        <OpenURLButton
+          style={styles.OpenURLButton}
+          url={
+            "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+          }
+        >
+          prefers-reduced-motion
+        </OpenURLButton>{" "}
+        is {reduceMotionEnabled ? "enabled" : "disabled"}.
+      </Text>
+
+      <Text style={styles.status}>
+        Screen reader is {screenReaderEnabled ? "enabled" : "disabled"}.
+      </Text>
       <ActivityIndicator size="large" color="#0000ff" style={styles.spinner} />
     </View>
   );
@@ -77,15 +132,29 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: "navy",
+    color: "white",
     padding: 10,
     marginVertical: 8,
     borderRadius: 5,
     textAlign: "center",
   },
+  status: {
+    backgroundColor: "yellow",
+    padding: 10,
+    borderRadius: 5,
+  },
+  OpenURLButton: {
+    fontFamily: "monospace",
+    backgroundColor: "black",
+    color: "lime",
+    textDecorationLine: "underline",
+    padding: 1,
+    borderRadius: 3,
+  },
   spinner: {
     position: "absolute",
     left: "50%",
     top: "50%",
-    transform: "translate(-50%)",
+    // transform: "translate(-50%)",
   },
 });
