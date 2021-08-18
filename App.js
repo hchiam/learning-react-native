@@ -8,7 +8,6 @@ import {
   SectionList,
   ActivityIndicator,
   AccessibilityInfo,
-  Linking,
 } from "react-native";
 import { OpenURLButton } from "./components/OpenURLButton.js";
 
